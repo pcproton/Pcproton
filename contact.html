@@ -1,0 +1,52 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Pcproton</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-neutral-950 text-white flex flex-col min-h-screen font-sans">
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-8 py-6">
+    <h1 class="text-2xl font-bold tracking-tight">Pc<span class="text-indigo-500">proton</span></h1>
+    <nav class="hidden md:flex gap-8 text-sm">
+      <a href="index.html" class="hover:text-indigo-400">Home</a>
+      <a href="about.html" class="hover:text-indigo-400">About</a>
+      <a href="#builds" class="hover:text-indigo-400">Builds</a>
+      <a href="contact.html" class="text-indigo-500 font-semibold">Contact</a>
+    </nav>
+    <button class="md:hidden p-2 border rounded border-white/30">☰</button>
+  </header>
+
+  <!-- Contact Section -->
+  <main class="flex-1 flex flex-col items-center justify-center px-6 py-12">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Contact Us</h2>
+    <p class="text-gray-400 max-w-md text-center mb-8">
+      Have questions about our budget PC builds? Send us an email and we'll get back to you as soon as possible.
+    </p>
+
+    <!-- Contact Form -->
+    <form action="mailto:pcproton@proton.me" method="post" enctype="text/plain" class="w-full max-w-md flex flex-col gap-4">
+      <input type="text" name="Name" placeholder="Your Name" required
+        class="px-4 py-2 rounded-md bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <input type="email" name="Email" placeholder="Your Email" required
+        class="px-4 py-2 rounded-md bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      <textarea name="Message" placeholder="Your Message" required rows="5"
+        class="px-4 py-2 rounded-md bg-neutral-800 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+      <button type="submit"
+        class="bg-indigo-600 hover:bg-indigo-700 transition rounded-full px-6 py-3 text-sm font-semibold">
+        Send Email
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
+    © 2025 Pcproton — Supporting your budget builds.
+  </footer>
+
+</body>
+</html>
