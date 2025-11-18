@@ -1,59 +1,65 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Pcproton</title>
+  <title>About | Pcproton</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("hidden");
+    }
+  </script>
 </head>
 
-<body class="bg-neutral-950 text-white flex flex-col min-h-screen font-sans">
+<body class="bg-black text-white font-sans min-h-screen">
 
   <!-- Navbar -->
   <header class="flex justify-between items-center px-8 py-6">
     <h1 class="text-2xl font-bold tracking-tight">Pc<span class="text-indigo-500">proton</span></h1>
+
     <nav class="hidden md:flex gap-8 text-sm">
       <a href="index.html" class="hover:text-indigo-400">Home</a>
       <a href="about.html" class="text-indigo-500 font-semibold">About</a>
       <a href="builds.html" class="hover:text-indigo-400">Builds</a>
+      <a href="quotes.html" class="hover:text-indigo-400">Quotes</a>
       <a href="contact.html" class="hover:text-indigo-400">Contact</a>
-      <a href="quotes.html" class="hover:text-indigo-400">Get a Quote</a>
     </nav>
-    <button class="md:hidden p-2 border rounded border-white/30">☰</button>
+
+    <button onclick="toggleMenu()" class="md:hidden p-2 border rounded border-white/30">☰</button>
   </header>
 
-  <!-- About Content -->
-  <main class="flex-1 flex flex-col items-center text-center px-6 py-12 max-w-3xl mx-auto">
-    <h2 class="text-4xl md:text-5xl font-extrabold mb-6">About Pcproton</h2>
+  <!-- Mobile Menu -->
+  <nav id="menu" class="hidden md:hidden flex flex-col gap-4 bg-neutral-900 px-8 py-6 text-lg">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="text-indigo-500">About</a>
+    <a href="builds.html">Builds</a>
+    <a href="quotes.html">Quotes</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <p class="text-gray-400 mb-6">
-      Pcproton was created with one clear purpose — to build reliable and affordable PCs that deliver strong performance without forcing you to spend unnecessary money.
+  <!-- Content -->
+  <main class="px-6 max-w-3xl mx-auto mt-12">
+    <h2 class="text-4xl font-extrabold mb-6">Why We're Different</h2>
+
+    <p class="text-gray-300 leading-relaxed mb-4">
+      Pcproton focuses on providing honest, budget-friendly PC builds with no upselling,
+      no unnecessary parts, and no inflated prices.
     </p>
 
-    <h3 class="text-2xl font-bold text-indigo-400 mb-3">Why We’re Different</h3>
-    <p class="text-gray-400 mb-6">
-      Many PC building companies prioritise fast sales, overpriced components, and upselling parts you don’t actually need. Once the purchase is complete, their customer service disappears — leaving customers with no support, no guidance, and no real care.
+    <p class="text-gray-300 leading-relaxed mb-4">
+      Unlike large companies, we create builds based on what you actually need —
+      not what increases profit margins.
     </p>
 
-    <p class="text-gray-400 mb-6">
-      We take pride in doing things properly. At Pcproton, customer support is at the heart of everything we do. Whether you’re choosing parts, fixing an issue, or simply need honest advice, we’re here to help every step of the way.
+    <p class="text-gray-300 leading-relaxed mb-4">
+      Every recommendation is tested, researched, and tailored for performance per pound.
     </p>
-
-    <h3 class="text-2xl font-bold text-indigo-400 mb-3">Our Mission</h3>
-    <p class="text-gray-400 mb-6">
-      We specialise in budget-focused builds that still deliver excellent performance. Our goal is to make powerful PCs accessible to everyone — students, gamers, creators, and anyone who needs strong performance on a tight budget.
-    </p>
-
-    <a href="contact.html"
-       class="bg-indigo-600 hover:bg-indigo-700 transition rounded-full px-6 py-3 text-sm font-semibold mt-4">
-      Contact Us
-    </a>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center text-gray-500 text-sm py-6 border-t border-gray-800">
-    © 2025 Pcproton — Built for support & performance.
+  <footer class="text-center text-gray-500 py-6 mt-12">
+    © 2025 Pcproton.
   </footer>
 
 </body>
